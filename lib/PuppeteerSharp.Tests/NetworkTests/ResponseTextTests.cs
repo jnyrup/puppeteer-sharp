@@ -58,11 +58,11 @@ namespace PuppeteerSharp.Tests.NetworkTests
             // Setup server to trap request.
             var serverResponseCompletion = new TaskCompletionSource<bool>();
             HttpResponse serverResponse = null;
-            Server.SetRoute("/get", context =>
+            Server.SetRoute("/get", async context =>
             {
                 serverResponse = context.Response;
-                context.Response.WriteAsync("hello ");
-                return serverResponseCompletion.Task;
+                await context.Response.WriteAsync("hello ");
+                await serverResponseCompletion.Task;
             });
             // Setup page to trap response.
             IResponse pageResponse = null;
