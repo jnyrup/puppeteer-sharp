@@ -42,6 +42,7 @@ namespace PuppeteerSharp.Tests.EvaluationTests
             Assert.Null(await Page.EvaluateExpressionAsync("window.e"));
         }
 
+        [Test]
         public async Task ShouldWorkWithExpressions()
         {
             await Page.EvaluateExpressionOnNewDocumentAsync("window.injected = 123;");

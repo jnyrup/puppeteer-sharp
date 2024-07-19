@@ -25,6 +25,7 @@ namespace PuppeteerSharp.Tests.ElementHandleTests
             Assert.AreEqual(Page.FirstChildFrame(), frame);
         }
 
+        [Test]
         public async Task ShouldWorkHeadful()
         {
             await using var Browser = await Puppeteer.LaunchAsync(_headfulOptions);

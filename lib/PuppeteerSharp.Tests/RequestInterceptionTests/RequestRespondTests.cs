@@ -138,6 +138,7 @@ namespace PuppeteerSharp.Tests.RequestInterceptionTests
             Assert.AreEqual("Yo, page!", await Page.EvaluateExpressionAsync<string>("document.body.textContent"));
         }
 
+        [Test]
         public async Task ShouldAllowMultipleInterceptedRequestResponseHeaders()
         {
             await Page.SetRequestInterceptionAsync(true);

@@ -61,6 +61,7 @@ namespace PuppeteerSharp.Tests.PageTests
             Assert.AreEqual(500500, sum);
         }
 
+        [Test]
         public async Task ShouldWorkWithAwaitedElements()
         {
             await Page.SetContentAsync("<div>hello</div><div>beautiful</div><div>world!</div>");

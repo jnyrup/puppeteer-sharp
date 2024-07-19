@@ -31,6 +31,7 @@ namespace PuppeteerSharp.Tests.FixturesTests
             Assert.True(success);
         }
 
+        [Test]
         public async Task ShouldCloseTheBrowserWhenTheConnectedProcessCloses()
         {
             var browserClosedTaskWrapper = new TaskCompletionSource<bool>();

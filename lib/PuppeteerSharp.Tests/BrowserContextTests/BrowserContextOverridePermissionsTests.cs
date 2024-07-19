@@ -107,6 +107,7 @@ namespace PuppeteerSharp.Tests.BrowserContextTests
             await otherContext.CloseAsync();
         }
 
+        [Test]
         public async Task AllEnumsdAreValid()
         {
             await Page.GoToAsync(TestConstants.EmptyPage);
